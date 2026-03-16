@@ -1,0 +1,12 @@
+#Create your prompots
+
+syste_prompt = """ text """
+user_prompt=""" text """
+
+# calling OpenAI with the message 
+
+messages = [{"role": "user", "content": message}]
+
+openai = OpenAI()
+response = openai.chat.completions.create(model="gpt-5-nano", messages=messages)
+response.choices[0].message.content
